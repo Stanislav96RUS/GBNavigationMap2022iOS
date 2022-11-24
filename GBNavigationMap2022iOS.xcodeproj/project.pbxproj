@@ -7,71 +7,133 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		6CD7D99159794BDFD0F3FA39 /* Pods_GBNavigationMap2022iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D553FE4F8752BC7EA252075C /* Pods_GBNavigationMap2022iOS.framework */; };
-		85BD969E2926645400EF1C01 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85BD969D2926645400EF1C01 /* AppDelegate.swift */; };
-		85BD96A02926645400EF1C01 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85BD969F2926645400EF1C01 /* SceneDelegate.swift */; };
-		85BD96A22926645400EF1C01 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85BD96A12926645400EF1C01 /* ViewController.swift */; };
-		85BD96A52926645400EF1C01 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 85BD96A32926645400EF1C01 /* Main.storyboard */; };
-		85BD96A72926645500EF1C01 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 85BD96A62926645500EF1C01 /* Assets.xcassets */; };
-		85BD96AA2926645500EF1C01 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 85BD96A82926645500EF1C01 /* LaunchScreen.storyboard */; };
-		85BD96B52926645500EF1C01 /* GBNavigationMap2022iOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85BD96B42926645500EF1C01 /* GBNavigationMap2022iOSTests.swift */; };
-		85BD96BF2926645500EF1C01 /* GBNavigationMap2022iOSUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85BD96BE2926645500EF1C01 /* GBNavigationMap2022iOSUITests.swift */; };
-		85BD96C12926645500EF1C01 /* GBNavigationMap2022iOSUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85BD96C02926645500EF1C01 /* GBNavigationMap2022iOSUITestsLaunchTests.swift */; };
+		8508ABAE292F402C009EA59B /* RealmService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8508ABAD292F402C009EA59B /* RealmService.swift */; };
+		85753FA4292DFF8800E615C0 /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = 85753FA3292DFF8800E615C0 /* Realm */; };
+		85753FA6292DFF8800E615C0 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 85753FA5292DFF8800E615C0 /* RealmSwift */; };
+		85753FA8292E035600E615C0 /* CoordinateModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85753FA7292E035600E615C0 /* CoordinateModel.swift */; };
+		857FC937292BA6140010CDFC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 857FC936292BA6140010CDFC /* AppDelegate.swift */; };
+		857FC939292BA6140010CDFC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 857FC938292BA6140010CDFC /* SceneDelegate.swift */; };
+		857FC93B292BA6140010CDFC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 857FC93A292BA6140010CDFC /* ViewController.swift */; };
+		857FC93E292BA6140010CDFC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 857FC93C292BA6140010CDFC /* Main.storyboard */; };
+		857FC940292BA6150010CDFC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 857FC93F292BA6150010CDFC /* Assets.xcassets */; };
+		857FC943292BA6150010CDFC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 857FC941292BA6150010CDFC /* LaunchScreen.storyboard */; };
+		857FC94E292BA6150010CDFC /* GBNavigationMap2022iOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 857FC94D292BA6150010CDFC /* GBNavigationMap2022iOSTests.swift */; };
+		857FC958292BA6150010CDFC /* GBNavigationMap2022iOSUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 857FC957292BA6150010CDFC /* GBNavigationMap2022iOSUITests.swift */; };
+		857FC95A292BA6150010CDFC /* GBNavigationMap2022iOSUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 857FC959292BA6150010CDFC /* GBNavigationMap2022iOSUITestsLaunchTests.swift */; };
+		857FC975292BA6E10010CDFC /* GoogleMapsCore.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 857FC972292BA6E10010CDFC /* GoogleMapsCore.xcframework */; };
+		857FC976292BA6E10010CDFC /* GoogleMaps.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 857FC973292BA6E10010CDFC /* GoogleMaps.xcframework */; };
+		857FC977292BA6E10010CDFC /* GoogleMapsBase.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 857FC974292BA6E10010CDFC /* GoogleMapsBase.xcframework */; };
+		857FC97A292BA7730010CDFC /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 857FC979292BA7730010CDFC /* Accelerate.framework */; };
+		857FC97C292BA7790010CDFC /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 857FC97B292BA7790010CDFC /* CoreData.framework */; };
+		857FC97E292BA7820010CDFC /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 857FC97D292BA7820010CDFC /* CoreGraphics.framework */; };
+		857FC980292BA78C0010CDFC /* CoreImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 857FC97F292BA78C0010CDFC /* CoreImage.framework */; };
+		857FC982292BA7A20010CDFC /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 857FC981292BA7A20010CDFC /* CoreLocation.framework */; };
+		857FC984292BA7B00010CDFC /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 857FC983292BA7B00010CDFC /* CoreTelephony.framework */; };
+		857FC986292BA7BA0010CDFC /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 857FC985292BA7BA0010CDFC /* CoreText.framework */; };
+		857FC988292BA7C30010CDFC /* GLKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 857FC987292BA7C30010CDFC /* GLKit.framework */; };
+		857FC98A292BA7CC0010CDFC /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 857FC989292BA7CC0010CDFC /* ImageIO.framework */; };
+		857FC98C292BA7D70010CDFC /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 857FC98B292BA7D70010CDFC /* libc++.tbd */; };
+		857FC98E292BA7E20010CDFC /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 857FC98D292BA7E20010CDFC /* libz.tbd */; };
+		857FC990292BA7EC0010CDFC /* Metal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 857FC98F292BA7EC0010CDFC /* Metal.framework */; };
+		857FC992292BA7F50010CDFC /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 857FC991292BA7F50010CDFC /* OpenGLES.framework */; };
+		857FC994292BA8010010CDFC /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 857FC993292BA8010010CDFC /* QuartzCore.framework */; };
+		857FC996292BA8090010CDFC /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 857FC995292BA8090010CDFC /* SystemConfiguration.framework */; };
+		857FC998292BA8110010CDFC /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 857FC997292BA8110010CDFC /* UIKit.framework */; };
+		857FC99C292BAA850010CDFC /* GoogleMaps.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 857FC99B292BAA850010CDFC /* GoogleMaps.bundle */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		85BD96B12926645500EF1C01 /* PBXContainerItemProxy */ = {
+		857FC94A292BA6150010CDFC /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 85BD96922926645400EF1C01 /* Project object */;
+			containerPortal = 857FC92B292BA6140010CDFC /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 85BD96992926645400EF1C01;
+			remoteGlobalIDString = 857FC932292BA6140010CDFC;
 			remoteInfo = GBNavigationMap2022iOS;
 		};
-		85BD96BB2926645500EF1C01 /* PBXContainerItemProxy */ = {
+		857FC954292BA6150010CDFC /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 85BD96922926645400EF1C01 /* Project object */;
+			containerPortal = 857FC92B292BA6140010CDFC /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 85BD96992926645400EF1C01;
+			remoteGlobalIDString = 857FC932292BA6140010CDFC;
 			remoteInfo = GBNavigationMap2022iOS;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		7884400DA05FEC5217FF8252 /* Pods-GBNavigationMap2022iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GBNavigationMap2022iOS.debug.xcconfig"; path = "Target Support Files/Pods-GBNavigationMap2022iOS/Pods-GBNavigationMap2022iOS.debug.xcconfig"; sourceTree = "<group>"; };
-		85BD969A2926645400EF1C01 /* GBNavigationMap2022iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GBNavigationMap2022iOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		85BD969D2926645400EF1C01 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		85BD969F2926645400EF1C01 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		85BD96A12926645400EF1C01 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		85BD96A42926645400EF1C01 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		85BD96A62926645500EF1C01 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		85BD96A92926645500EF1C01 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		85BD96AB2926645500EF1C01 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		85BD96B02926645500EF1C01 /* GBNavigationMap2022iOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GBNavigationMap2022iOSTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		85BD96B42926645500EF1C01 /* GBNavigationMap2022iOSTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GBNavigationMap2022iOSTests.swift; sourceTree = "<group>"; };
-		85BD96BA2926645500EF1C01 /* GBNavigationMap2022iOSUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GBNavigationMap2022iOSUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		85BD96BE2926645500EF1C01 /* GBNavigationMap2022iOSUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GBNavigationMap2022iOSUITests.swift; sourceTree = "<group>"; };
-		85BD96C02926645500EF1C01 /* GBNavigationMap2022iOSUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GBNavigationMap2022iOSUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		D553FE4F8752BC7EA252075C /* Pods_GBNavigationMap2022iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GBNavigationMap2022iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		F3DF2116C50BD59E3D47ACD9 /* Pods-GBNavigationMap2022iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GBNavigationMap2022iOS.release.xcconfig"; path = "Target Support Files/Pods-GBNavigationMap2022iOS/Pods-GBNavigationMap2022iOS.release.xcconfig"; sourceTree = "<group>"; };
+		8508ABAD292F402C009EA59B /* RealmService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmService.swift; sourceTree = "<group>"; };
+		85753FA7292E035600E615C0 /* CoordinateModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinateModel.swift; sourceTree = "<group>"; };
+		857FC933292BA6140010CDFC /* GBNavigationMap2022iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GBNavigationMap2022iOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		857FC936292BA6140010CDFC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		857FC938292BA6140010CDFC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		857FC93A292BA6140010CDFC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		857FC93D292BA6140010CDFC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		857FC93F292BA6150010CDFC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		857FC942292BA6150010CDFC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		857FC944292BA6150010CDFC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		857FC949292BA6150010CDFC /* GBNavigationMap2022iOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GBNavigationMap2022iOSTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		857FC94D292BA6150010CDFC /* GBNavigationMap2022iOSTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GBNavigationMap2022iOSTests.swift; sourceTree = "<group>"; };
+		857FC953292BA6150010CDFC /* GBNavigationMap2022iOSUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GBNavigationMap2022iOSUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		857FC957292BA6150010CDFC /* GBNavigationMap2022iOSUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GBNavigationMap2022iOSUITests.swift; sourceTree = "<group>"; };
+		857FC959292BA6150010CDFC /* GBNavigationMap2022iOSUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GBNavigationMap2022iOSUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		857FC972292BA6E10010CDFC /* GoogleMapsCore.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = GoogleMapsCore.xcframework; sourceTree = "<group>"; };
+		857FC973292BA6E10010CDFC /* GoogleMaps.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = GoogleMaps.xcframework; sourceTree = "<group>"; };
+		857FC974292BA6E10010CDFC /* GoogleMapsBase.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = GoogleMapsBase.xcframework; sourceTree = "<group>"; };
+		857FC979292BA7730010CDFC /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
+		857FC97B292BA7790010CDFC /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		857FC97D292BA7820010CDFC /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		857FC97F292BA78C0010CDFC /* CoreImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreImage.framework; path = System/Library/Frameworks/CoreImage.framework; sourceTree = SDKROOT; };
+		857FC981292BA7A20010CDFC /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		857FC983292BA7B00010CDFC /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
+		857FC985292BA7BA0010CDFC /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
+		857FC987292BA7C30010CDFC /* GLKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLKit.framework; path = System/Library/Frameworks/GLKit.framework; sourceTree = SDKROOT; };
+		857FC989292BA7CC0010CDFC /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
+		857FC98B292BA7D70010CDFC /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
+		857FC98D292BA7E20010CDFC /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		857FC98F292BA7EC0010CDFC /* Metal.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Metal.framework; path = System/Library/Frameworks/Metal.framework; sourceTree = SDKROOT; };
+		857FC991292BA7F50010CDFC /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
+		857FC993292BA8010010CDFC /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		857FC995292BA8090010CDFC /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		857FC997292BA8110010CDFC /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		857FC99B292BAA850010CDFC /* GoogleMaps.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = GoogleMaps.bundle; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		85BD96972926645400EF1C01 /* Frameworks */ = {
+		857FC930292BA6140010CDFC /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6CD7D99159794BDFD0F3FA39 /* Pods_GBNavigationMap2022iOS.framework in Frameworks */,
+				857FC998292BA8110010CDFC /* UIKit.framework in Frameworks */,
+				857FC996292BA8090010CDFC /* SystemConfiguration.framework in Frameworks */,
+				857FC994292BA8010010CDFC /* QuartzCore.framework in Frameworks */,
+				857FC992292BA7F50010CDFC /* OpenGLES.framework in Frameworks */,
+				857FC990292BA7EC0010CDFC /* Metal.framework in Frameworks */,
+				857FC98E292BA7E20010CDFC /* libz.tbd in Frameworks */,
+				857FC98C292BA7D70010CDFC /* libc++.tbd in Frameworks */,
+				857FC98A292BA7CC0010CDFC /* ImageIO.framework in Frameworks */,
+				857FC988292BA7C30010CDFC /* GLKit.framework in Frameworks */,
+				85753FA6292DFF8800E615C0 /* RealmSwift in Frameworks */,
+				857FC986292BA7BA0010CDFC /* CoreText.framework in Frameworks */,
+				857FC984292BA7B00010CDFC /* CoreTelephony.framework in Frameworks */,
+				857FC982292BA7A20010CDFC /* CoreLocation.framework in Frameworks */,
+				857FC980292BA78C0010CDFC /* CoreImage.framework in Frameworks */,
+				857FC97E292BA7820010CDFC /* CoreGraphics.framework in Frameworks */,
+				85753FA4292DFF8800E615C0 /* Realm in Frameworks */,
+				857FC97C292BA7790010CDFC /* CoreData.framework in Frameworks */,
+				857FC97A292BA7730010CDFC /* Accelerate.framework in Frameworks */,
+				857FC975292BA6E10010CDFC /* GoogleMapsCore.xcframework in Frameworks */,
+				857FC977292BA6E10010CDFC /* GoogleMapsBase.xcframework in Frameworks */,
+				857FC976292BA6E10010CDFC /* GoogleMaps.xcframework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		85BD96AD2926645500EF1C01 /* Frameworks */ = {
+		857FC946292BA6150010CDFC /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		85BD96B72926645500EF1C01 /* Frameworks */ = {
+		857FC950292BA6150010CDFC /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -81,158 +143,171 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		0DBF81AF4ECAE1156F363A64 /* Frameworks */ = {
+		857FC92A292BA6140010CDFC = {
 			isa = PBXGroup;
 			children = (
-				D553FE4F8752BC7EA252075C /* Pods_GBNavigationMap2022iOS.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		7E75505E1D693494A9D61FD7 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				7884400DA05FEC5217FF8252 /* Pods-GBNavigationMap2022iOS.debug.xcconfig */,
-				F3DF2116C50BD59E3D47ACD9 /* Pods-GBNavigationMap2022iOS.release.xcconfig */,
-			);
-			path = Pods;
-			sourceTree = "<group>";
-		};
-		85BD96912926645400EF1C01 = {
-			isa = PBXGroup;
-			children = (
-				85BD969C2926645400EF1C01 /* GBNavigationMap2022iOS */,
-				85BD96B32926645500EF1C01 /* GBNavigationMap2022iOSTests */,
-				85BD96BD2926645500EF1C01 /* GBNavigationMap2022iOSUITests */,
-				85BD969B2926645400EF1C01 /* Products */,
-				7E75505E1D693494A9D61FD7 /* Pods */,
-				0DBF81AF4ECAE1156F363A64 /* Frameworks */,
+				857FC935292BA6140010CDFC /* GBNavigationMap2022iOS */,
+				857FC94C292BA6150010CDFC /* GBNavigationMap2022iOSTests */,
+				857FC956292BA6150010CDFC /* GBNavigationMap2022iOSUITests */,
+				857FC934292BA6140010CDFC /* Products */,
+				857FC978292BA7720010CDFC /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
-		85BD969B2926645400EF1C01 /* Products */ = {
+		857FC934292BA6140010CDFC /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				85BD969A2926645400EF1C01 /* GBNavigationMap2022iOS.app */,
-				85BD96B02926645500EF1C01 /* GBNavigationMap2022iOSTests.xctest */,
-				85BD96BA2926645500EF1C01 /* GBNavigationMap2022iOSUITests.xctest */,
+				857FC933292BA6140010CDFC /* GBNavigationMap2022iOS.app */,
+				857FC949292BA6150010CDFC /* GBNavigationMap2022iOSTests.xctest */,
+				857FC953292BA6150010CDFC /* GBNavigationMap2022iOSUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		85BD969C2926645400EF1C01 /* GBNavigationMap2022iOS */ = {
+		857FC935292BA6140010CDFC /* GBNavigationMap2022iOS */ = {
 			isa = PBXGroup;
 			children = (
-				85BD969D2926645400EF1C01 /* AppDelegate.swift */,
-				85BD969F2926645400EF1C01 /* SceneDelegate.swift */,
-				85BD96A12926645400EF1C01 /* ViewController.swift */,
-				85BD96A32926645400EF1C01 /* Main.storyboard */,
-				85BD96A62926645500EF1C01 /* Assets.xcassets */,
-				85BD96A82926645500EF1C01 /* LaunchScreen.storyboard */,
-				85BD96AB2926645500EF1C01 /* Info.plist */,
+				857FC936292BA6140010CDFC /* AppDelegate.swift */,
+				85753FA7292E035600E615C0 /* CoordinateModel.swift */,
+				8508ABAD292F402C009EA59B /* RealmService.swift */,
+				857FC938292BA6140010CDFC /* SceneDelegate.swift */,
+				857FC93A292BA6140010CDFC /* ViewController.swift */,
+				857FC93C292BA6140010CDFC /* Main.storyboard */,
+				857FC93F292BA6150010CDFC /* Assets.xcassets */,
+				857FC941292BA6150010CDFC /* LaunchScreen.storyboard */,
+				857FC944292BA6150010CDFC /* Info.plist */,
+				857FC99B292BAA850010CDFC /* GoogleMaps.bundle */,
+				857FC973292BA6E10010CDFC /* GoogleMaps.xcframework */,
+				857FC974292BA6E10010CDFC /* GoogleMapsBase.xcframework */,
+				857FC972292BA6E10010CDFC /* GoogleMapsCore.xcframework */,
 			);
 			path = GBNavigationMap2022iOS;
 			sourceTree = "<group>";
 		};
-		85BD96B32926645500EF1C01 /* GBNavigationMap2022iOSTests */ = {
+		857FC94C292BA6150010CDFC /* GBNavigationMap2022iOSTests */ = {
 			isa = PBXGroup;
 			children = (
-				85BD96B42926645500EF1C01 /* GBNavigationMap2022iOSTests.swift */,
+				857FC94D292BA6150010CDFC /* GBNavigationMap2022iOSTests.swift */,
 			);
 			path = GBNavigationMap2022iOSTests;
 			sourceTree = "<group>";
 		};
-		85BD96BD2926645500EF1C01 /* GBNavigationMap2022iOSUITests */ = {
+		857FC956292BA6150010CDFC /* GBNavigationMap2022iOSUITests */ = {
 			isa = PBXGroup;
 			children = (
-				85BD96BE2926645500EF1C01 /* GBNavigationMap2022iOSUITests.swift */,
-				85BD96C02926645500EF1C01 /* GBNavigationMap2022iOSUITestsLaunchTests.swift */,
+				857FC957292BA6150010CDFC /* GBNavigationMap2022iOSUITests.swift */,
+				857FC959292BA6150010CDFC /* GBNavigationMap2022iOSUITestsLaunchTests.swift */,
 			);
 			path = GBNavigationMap2022iOSUITests;
+			sourceTree = "<group>";
+		};
+		857FC978292BA7720010CDFC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				857FC997292BA8110010CDFC /* UIKit.framework */,
+				857FC995292BA8090010CDFC /* SystemConfiguration.framework */,
+				857FC993292BA8010010CDFC /* QuartzCore.framework */,
+				857FC991292BA7F50010CDFC /* OpenGLES.framework */,
+				857FC98F292BA7EC0010CDFC /* Metal.framework */,
+				857FC98D292BA7E20010CDFC /* libz.tbd */,
+				857FC98B292BA7D70010CDFC /* libc++.tbd */,
+				857FC989292BA7CC0010CDFC /* ImageIO.framework */,
+				857FC987292BA7C30010CDFC /* GLKit.framework */,
+				857FC985292BA7BA0010CDFC /* CoreText.framework */,
+				857FC983292BA7B00010CDFC /* CoreTelephony.framework */,
+				857FC981292BA7A20010CDFC /* CoreLocation.framework */,
+				857FC97F292BA78C0010CDFC /* CoreImage.framework */,
+				857FC97D292BA7820010CDFC /* CoreGraphics.framework */,
+				857FC97B292BA7790010CDFC /* CoreData.framework */,
+				857FC979292BA7730010CDFC /* Accelerate.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		85BD96992926645400EF1C01 /* GBNavigationMap2022iOS */ = {
+		857FC932292BA6140010CDFC /* GBNavigationMap2022iOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 85BD96C42926645500EF1C01 /* Build configuration list for PBXNativeTarget "GBNavigationMap2022iOS" */;
+			buildConfigurationList = 857FC95D292BA6150010CDFC /* Build configuration list for PBXNativeTarget "GBNavigationMap2022iOS" */;
 			buildPhases = (
-				57D514353F3BB6036F66A42A /* [CP] Check Pods Manifest.lock */,
-				85BD96962926645400EF1C01 /* Sources */,
-				85BD96972926645400EF1C01 /* Frameworks */,
-				85BD96982926645400EF1C01 /* Resources */,
-				5E59345C506039E931F30EF0 /* [CP] Copy Pods Resources */,
+				857FC92F292BA6140010CDFC /* Sources */,
+				857FC930292BA6140010CDFC /* Frameworks */,
+				857FC931292BA6140010CDFC /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = GBNavigationMap2022iOS;
+			packageProductDependencies = (
+				85753FA3292DFF8800E615C0 /* Realm */,
+				85753FA5292DFF8800E615C0 /* RealmSwift */,
+			);
 			productName = GBNavigationMap2022iOS;
-			productReference = 85BD969A2926645400EF1C01 /* GBNavigationMap2022iOS.app */;
+			productReference = 857FC933292BA6140010CDFC /* GBNavigationMap2022iOS.app */;
 			productType = "com.apple.product-type.application";
 		};
-		85BD96AF2926645500EF1C01 /* GBNavigationMap2022iOSTests */ = {
+		857FC948292BA6150010CDFC /* GBNavigationMap2022iOSTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 85BD96C72926645500EF1C01 /* Build configuration list for PBXNativeTarget "GBNavigationMap2022iOSTests" */;
+			buildConfigurationList = 857FC960292BA6150010CDFC /* Build configuration list for PBXNativeTarget "GBNavigationMap2022iOSTests" */;
 			buildPhases = (
-				85BD96AC2926645500EF1C01 /* Sources */,
-				85BD96AD2926645500EF1C01 /* Frameworks */,
-				85BD96AE2926645500EF1C01 /* Resources */,
+				857FC945292BA6150010CDFC /* Sources */,
+				857FC946292BA6150010CDFC /* Frameworks */,
+				857FC947292BA6150010CDFC /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				85BD96B22926645500EF1C01 /* PBXTargetDependency */,
+				857FC94B292BA6150010CDFC /* PBXTargetDependency */,
 			);
 			name = GBNavigationMap2022iOSTests;
 			productName = GBNavigationMap2022iOSTests;
-			productReference = 85BD96B02926645500EF1C01 /* GBNavigationMap2022iOSTests.xctest */;
+			productReference = 857FC949292BA6150010CDFC /* GBNavigationMap2022iOSTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		85BD96B92926645500EF1C01 /* GBNavigationMap2022iOSUITests */ = {
+		857FC952292BA6150010CDFC /* GBNavigationMap2022iOSUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 85BD96CA2926645500EF1C01 /* Build configuration list for PBXNativeTarget "GBNavigationMap2022iOSUITests" */;
+			buildConfigurationList = 857FC963292BA6150010CDFC /* Build configuration list for PBXNativeTarget "GBNavigationMap2022iOSUITests" */;
 			buildPhases = (
-				85BD96B62926645500EF1C01 /* Sources */,
-				85BD96B72926645500EF1C01 /* Frameworks */,
-				85BD96B82926645500EF1C01 /* Resources */,
+				857FC94F292BA6150010CDFC /* Sources */,
+				857FC950292BA6150010CDFC /* Frameworks */,
+				857FC951292BA6150010CDFC /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				85BD96BC2926645500EF1C01 /* PBXTargetDependency */,
+				857FC955292BA6150010CDFC /* PBXTargetDependency */,
 			);
 			name = GBNavigationMap2022iOSUITests;
 			productName = GBNavigationMap2022iOSUITests;
-			productReference = 85BD96BA2926645500EF1C01 /* GBNavigationMap2022iOSUITests.xctest */;
+			productReference = 857FC953292BA6150010CDFC /* GBNavigationMap2022iOSUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		85BD96922926645400EF1C01 /* Project object */ = {
+		857FC92B292BA6140010CDFC /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1410;
 				LastUpgradeCheck = 1410;
 				TargetAttributes = {
-					85BD96992926645400EF1C01 = {
+					857FC932292BA6140010CDFC = {
 						CreatedOnToolsVersion = 14.1;
 					};
-					85BD96AF2926645500EF1C01 = {
+					857FC948292BA6150010CDFC = {
 						CreatedOnToolsVersion = 14.1;
-						TestTargetID = 85BD96992926645400EF1C01;
+						TestTargetID = 857FC932292BA6140010CDFC;
 					};
-					85BD96B92926645500EF1C01 = {
+					857FC952292BA6150010CDFC = {
 						CreatedOnToolsVersion = 14.1;
-						TestTargetID = 85BD96992926645400EF1C01;
+						TestTargetID = 857FC932292BA6140010CDFC;
 					};
 				};
 			};
-			buildConfigurationList = 85BD96952926645400EF1C01 /* Build configuration list for PBXProject "GBNavigationMap2022iOS" */;
+			buildConfigurationList = 857FC92E292BA6140010CDFC /* Build configuration list for PBXProject "GBNavigationMap2022iOS" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -240,37 +315,41 @@
 				en,
 				Base,
 			);
-			mainGroup = 85BD96912926645400EF1C01;
-			productRefGroup = 85BD969B2926645400EF1C01 /* Products */;
+			mainGroup = 857FC92A292BA6140010CDFC;
+			packageReferences = (
+				85753FA2292DFF8800E615C0 /* XCRemoteSwiftPackageReference "realm-swift" */,
+			);
+			productRefGroup = 857FC934292BA6140010CDFC /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				85BD96992926645400EF1C01 /* GBNavigationMap2022iOS */,
-				85BD96AF2926645500EF1C01 /* GBNavigationMap2022iOSTests */,
-				85BD96B92926645500EF1C01 /* GBNavigationMap2022iOSUITests */,
+				857FC932292BA6140010CDFC /* GBNavigationMap2022iOS */,
+				857FC948292BA6150010CDFC /* GBNavigationMap2022iOSTests */,
+				857FC952292BA6150010CDFC /* GBNavigationMap2022iOSUITests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		85BD96982926645400EF1C01 /* Resources */ = {
+		857FC931292BA6140010CDFC /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				85BD96AA2926645500EF1C01 /* LaunchScreen.storyboard in Resources */,
-				85BD96A72926645500EF1C01 /* Assets.xcassets in Resources */,
-				85BD96A52926645400EF1C01 /* Main.storyboard in Resources */,
+				857FC943292BA6150010CDFC /* LaunchScreen.storyboard in Resources */,
+				857FC940292BA6150010CDFC /* Assets.xcassets in Resources */,
+				857FC93E292BA6140010CDFC /* Main.storyboard in Resources */,
+				857FC99C292BAA850010CDFC /* GoogleMaps.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		85BD96AE2926645500EF1C01 /* Resources */ = {
+		857FC947292BA6150010CDFC /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		85BD96B82926645500EF1C01 /* Resources */ = {
+		857FC951292BA6150010CDFC /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -279,104 +358,64 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
-/* Begin PBXShellScriptBuildPhase section */
-		57D514353F3BB6036F66A42A /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-GBNavigationMap2022iOS-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		5E59345C506039E931F30EF0 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-GBNavigationMap2022iOS/Pods-GBNavigationMap2022iOS-resources-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-GBNavigationMap2022iOS/Pods-GBNavigationMap2022iOS-resources-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-GBNavigationMap2022iOS/Pods-GBNavigationMap2022iOS-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
-
 /* Begin PBXSourcesBuildPhase section */
-		85BD96962926645400EF1C01 /* Sources */ = {
+		857FC92F292BA6140010CDFC /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				85BD96A22926645400EF1C01 /* ViewController.swift in Sources */,
-				85BD969E2926645400EF1C01 /* AppDelegate.swift in Sources */,
-				85BD96A02926645400EF1C01 /* SceneDelegate.swift in Sources */,
+				857FC93B292BA6140010CDFC /* ViewController.swift in Sources */,
+				857FC937292BA6140010CDFC /* AppDelegate.swift in Sources */,
+				85753FA8292E035600E615C0 /* CoordinateModel.swift in Sources */,
+				857FC939292BA6140010CDFC /* SceneDelegate.swift in Sources */,
+				8508ABAE292F402C009EA59B /* RealmService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		85BD96AC2926645500EF1C01 /* Sources */ = {
+		857FC945292BA6150010CDFC /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				85BD96B52926645500EF1C01 /* GBNavigationMap2022iOSTests.swift in Sources */,
+				857FC94E292BA6150010CDFC /* GBNavigationMap2022iOSTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		85BD96B62926645500EF1C01 /* Sources */ = {
+		857FC94F292BA6150010CDFC /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				85BD96C12926645500EF1C01 /* GBNavigationMap2022iOSUITestsLaunchTests.swift in Sources */,
-				85BD96BF2926645500EF1C01 /* GBNavigationMap2022iOSUITests.swift in Sources */,
+				857FC95A292BA6150010CDFC /* GBNavigationMap2022iOSUITestsLaunchTests.swift in Sources */,
+				857FC958292BA6150010CDFC /* GBNavigationMap2022iOSUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		85BD96B22926645500EF1C01 /* PBXTargetDependency */ = {
+		857FC94B292BA6150010CDFC /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 85BD96992926645400EF1C01 /* GBNavigationMap2022iOS */;
-			targetProxy = 85BD96B12926645500EF1C01 /* PBXContainerItemProxy */;
+			target = 857FC932292BA6140010CDFC /* GBNavigationMap2022iOS */;
+			targetProxy = 857FC94A292BA6150010CDFC /* PBXContainerItemProxy */;
 		};
-		85BD96BC2926645500EF1C01 /* PBXTargetDependency */ = {
+		857FC955292BA6150010CDFC /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 85BD96992926645400EF1C01 /* GBNavigationMap2022iOS */;
-			targetProxy = 85BD96BB2926645500EF1C01 /* PBXContainerItemProxy */;
+			target = 857FC932292BA6140010CDFC /* GBNavigationMap2022iOS */;
+			targetProxy = 857FC954292BA6150010CDFC /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		85BD96A32926645400EF1C01 /* Main.storyboard */ = {
+		857FC93C292BA6140010CDFC /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				85BD96A42926645400EF1C01 /* Base */,
+				857FC93D292BA6140010CDFC /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
-		85BD96A82926645500EF1C01 /* LaunchScreen.storyboard */ = {
+		857FC941292BA6150010CDFC /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				85BD96A92926645500EF1C01 /* Base */,
+				857FC942292BA6150010CDFC /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -384,7 +423,7 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		85BD96C22926645500EF1C01 /* Debug */ = {
+		857FC95B292BA6150010CDFC /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -444,7 +483,7 @@
 			};
 			name = Debug;
 		};
-		85BD96C32926645500EF1C01 /* Release */ = {
+		857FC95C292BA6150010CDFC /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -498,20 +537,19 @@
 			};
 			name = Release;
 		};
-		85BD96C52926645500EF1C01 /* Debug */ = {
+		857FC95E292BA6150010CDFC /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7884400DA05FEC5217FF8252 /* Pods-GBNavigationMap2022iOS.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 323JAZVTZC;
-				"EXCLUDED_ARCHS[sdk=*]" = arm64;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = GBNavigationMap2022iOS/Info.plist;
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Предоставьте доступ!";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -520,6 +558,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = "-.GBNavigationMap2022iOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -528,20 +567,19 @@
 			};
 			name = Debug;
 		};
-		85BD96C62926645500EF1C01 /* Release */ = {
+		857FC95F292BA6150010CDFC /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F3DF2116C50BD59E3D47ACD9 /* Pods-GBNavigationMap2022iOS.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 323JAZVTZC;
-				"EXCLUDED_ARCHS[sdk=*]" = arm64;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = GBNavigationMap2022iOS/Info.plist;
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Предоставьте доступ!";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -550,7 +588,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = "-.GBNavigationMap2022iOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -559,7 +597,7 @@
 			};
 			name = Release;
 		};
-		85BD96C82926645500EF1C01 /* Debug */ = {
+		857FC961292BA6150010CDFC /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
@@ -578,7 +616,7 @@
 			};
 			name = Debug;
 		};
-		85BD96C92926645500EF1C01 /* Release */ = {
+		857FC962292BA6150010CDFC /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
@@ -597,7 +635,7 @@
 			};
 			name = Release;
 		};
-		85BD96CB2926645500EF1C01 /* Debug */ = {
+		857FC964292BA6150010CDFC /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
@@ -614,7 +652,7 @@
 			};
 			name = Debug;
 		};
-		85BD96CC2926645500EF1C01 /* Release */ = {
+		857FC965292BA6150010CDFC /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
@@ -634,43 +672,67 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		85BD96952926645400EF1C01 /* Build configuration list for PBXProject "GBNavigationMap2022iOS" */ = {
+		857FC92E292BA6140010CDFC /* Build configuration list for PBXProject "GBNavigationMap2022iOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				85BD96C22926645500EF1C01 /* Debug */,
-				85BD96C32926645500EF1C01 /* Release */,
+				857FC95B292BA6150010CDFC /* Debug */,
+				857FC95C292BA6150010CDFC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		85BD96C42926645500EF1C01 /* Build configuration list for PBXNativeTarget "GBNavigationMap2022iOS" */ = {
+		857FC95D292BA6150010CDFC /* Build configuration list for PBXNativeTarget "GBNavigationMap2022iOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				85BD96C52926645500EF1C01 /* Debug */,
-				85BD96C62926645500EF1C01 /* Release */,
+				857FC95E292BA6150010CDFC /* Debug */,
+				857FC95F292BA6150010CDFC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		85BD96C72926645500EF1C01 /* Build configuration list for PBXNativeTarget "GBNavigationMap2022iOSTests" */ = {
+		857FC960292BA6150010CDFC /* Build configuration list for PBXNativeTarget "GBNavigationMap2022iOSTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				85BD96C82926645500EF1C01 /* Debug */,
-				85BD96C92926645500EF1C01 /* Release */,
+				857FC961292BA6150010CDFC /* Debug */,
+				857FC962292BA6150010CDFC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		85BD96CA2926645500EF1C01 /* Build configuration list for PBXNativeTarget "GBNavigationMap2022iOSUITests" */ = {
+		857FC963292BA6150010CDFC /* Build configuration list for PBXNativeTarget "GBNavigationMap2022iOSUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				85BD96CB2926645500EF1C01 /* Debug */,
-				85BD96CC2926645500EF1C01 /* Release */,
+				857FC964292BA6150010CDFC /* Debug */,
+				857FC965292BA6150010CDFC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		85753FA2292DFF8800E615C0 /* XCRemoteSwiftPackageReference "realm-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/realm/realm-swift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 10.32.3;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		85753FA3292DFF8800E615C0 /* Realm */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 85753FA2292DFF8800E615C0 /* XCRemoteSwiftPackageReference "realm-swift" */;
+			productName = Realm;
+		};
+		85753FA5292DFF8800E615C0 /* RealmSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 85753FA2292DFF8800E615C0 /* XCRemoteSwiftPackageReference "realm-swift" */;
+			productName = RealmSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
-	rootObject = 85BD96922926645400EF1C01 /* Project object */;
+	rootObject = 857FC92B292BA6140010CDFC /* Project object */;
 }

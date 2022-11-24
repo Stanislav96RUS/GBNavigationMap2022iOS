@@ -16,48 +16,114 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OyT-oa-ArS" customClass="GMSMapView">
-                                <rect key="frame" x="0.0" y="59" width="393" height="793"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NOk-Ih-F0Q" customClass="GMSMapView">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C1q-5G-Es6">
-                                <rect key="frame" x="241" y="743.66666666666663" width="112" height="34.333333333333371"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9i5-Ev-W6J">
+                                <rect key="frame" x="283" y="763" width="80" height="25"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="25" id="qN0-ja-f6h"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="80" id="y81-Oz-W8Q"/>
+                                </constraints>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Add marker"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Stop track">
+                                    <fontDescription key="titleFontDescription" type="system" pointSize="10"/>
+                                </buttonConfiguration>
                                 <connections>
-                                    <action selector="addMarkerDidTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="L7e-N6-Emj"/>
+                                    <action selector="didTapStopButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="HNA-9e-kTa"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Ri-FH-7O9">
-                                <rect key="frame" x="40" y="743.66666666666663" width="144.66666666666666" height="34.333333333333371"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F0O-Rq-itu">
+                                <rect key="frame" x="283" y="708" width="80" height="25"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="25" id="8iR-3K-T59"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="80" id="rn1-Ar-xqH"/>
+                                </constraints>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Update location"/>
+                                <buttonConfiguration key="configuration" style="plain" title="New track">
+                                    <fontDescription key="titleFontDescription" type="system" pointSize="10"/>
+                                </buttonConfiguration>
                                 <connections>
-                                    <action selector="didTapUpdateLocation:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zBK-y9-BxC"/>
+                                    <action selector="didTapNewTrackButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="nc5-bn-mne"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fdz-Dk-Xrs">
+                                <rect key="frame" x="30" y="708" width="80" height="25"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="80" id="BbQ-Zw-DQF"/>
+                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="25" id="NbV-zv-WgV"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Track">
+                                    <fontDescription key="titleFontDescription" type="system" pointSize="10"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="didTapTrackButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mZe-bb-Itt"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qc5-1D-NON">
+                                <rect key="frame" x="146.66666666666666" y="733" width="100" height="25"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="25" id="ih4-wS-bPM"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="lSf-Jl-QPW"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Previous route">
+                                    <fontDescription key="titleFontDescription" type="system" pointSize="10"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="didTapPreviousRouteButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Wl7-4G-VLc"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HZR-8Z-MAP">
+                                <rect key="frame" x="30" y="763" width="80" height="25"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="80" id="Htb-q0-0uZ"/>
+                                    <constraint firstAttribute="height" constant="25" id="zXs-ja-GUe"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Current">
+                                    <fontDescription key="titleFontDescription" type="system" pointSize="10"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="didTapCurrentButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Z9N-vY-MCx"/>
                                 </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="C1q-5G-Es6" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="9Ri-FH-7O9" secondAttribute="trailing" constant="8" symbolic="YES" id="3Qq-Gl-PPy"/>
-                            <constraint firstItem="9Ri-FH-7O9" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="58H-5C-4d6"/>
-                            <constraint firstItem="OyT-oa-ArS" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Jv8-fS-fvB"/>
-                            <constraint firstAttribute="trailing" secondItem="OyT-oa-ArS" secondAttribute="trailing" id="O6w-kK-tzl"/>
-                            <constraint firstAttribute="bottom" secondItem="OyT-oa-ArS" secondAttribute="bottom" id="OcA-Ge-sPB"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="9Ri-FH-7O9" secondAttribute="bottom" constant="40" id="aLi-nA-xEe"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="C1q-5G-Es6" secondAttribute="bottom" constant="40" id="aMb-WP-L1o"/>
-                            <constraint firstItem="OyT-oa-ArS" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="fPe-VI-6sc"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="C1q-5G-Es6" secondAttribute="trailing" constant="40" id="t48-Fn-qU1"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="9i5-Ev-W6J" secondAttribute="trailing" constant="30" id="2eB-v3-qU3"/>
+                            <constraint firstItem="Qc5-1D-NON" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="3n8-ZB-QdR"/>
+                            <constraint firstItem="HZR-8Z-MAP" firstAttribute="top" secondItem="Fdz-Dk-Xrs" secondAttribute="bottom" constant="30" id="6rE-QI-vfv"/>
+                            <constraint firstItem="NOk-Ih-F0Q" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="JBG-n7-GAx"/>
+                            <constraint firstItem="NOk-Ih-F0Q" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="LWa-gU-6yf"/>
+                            <constraint firstItem="F0O-Rq-itu" firstAttribute="leading" secondItem="Fdz-Dk-Xrs" secondAttribute="trailing" constant="173" id="LqW-x5-ajD"/>
+                            <constraint firstItem="NOk-Ih-F0Q" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="M7R-eu-2GO"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="9i5-Ev-W6J" secondAttribute="bottom" constant="30" id="Op5-th-Ipl"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Qc5-1D-NON" secondAttribute="bottom" constant="60" id="Pnm-Ae-Ajn"/>
+                            <constraint firstItem="HZR-8Z-MAP" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="Shn-0I-QeY"/>
+                            <constraint firstItem="9i5-Ev-W6J" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="HZR-8Z-MAP" secondAttribute="trailing" constant="8" symbolic="YES" id="YRN-tN-rGE"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="F0O-Rq-itu" secondAttribute="trailing" constant="30" id="d9O-lo-AW8"/>
+                            <constraint firstItem="9i5-Ev-W6J" firstAttribute="top" secondItem="F0O-Rq-itu" secondAttribute="bottom" constant="30" id="hIV-iT-PZ4"/>
+                            <constraint firstAttribute="bottom" secondItem="NOk-Ih-F0Q" secondAttribute="bottom" id="k8u-do-eau"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="HZR-8Z-MAP" secondAttribute="bottom" constant="30" id="mnK-MT-1KC"/>
+                            <constraint firstItem="Fdz-Dk-Xrs" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="q7z-Xv-401"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="mapView" destination="OyT-oa-ArS" id="ttP-GY-UIF"/>
+                        <outlet property="mapView" destination="NOk-Ih-F0Q" id="fEC-Kd-GTA"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="21" y="5"/>
+            <point key="canvasLocation" x="-89" y="5"/>
         </scene>
     </scenes>
     <resources>
