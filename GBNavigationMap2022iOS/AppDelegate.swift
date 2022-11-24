@@ -2,10 +2,11 @@
 //  AppDelegate.swift
 //  GBNavigationMap2022iOS
 //
-//  Created by Stanislav on 17.11.2022.
+//  Created by Stanislav on 21.11.2022.
 //
 
 import UIKit
+import GoogleMaps
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -14,6 +15,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        GMSServices.provideAPIKey("AIzaSyAqVCDhvsX72yauEqDx1KEWjNcTQ1u1GiY")
+        
         return true
     }
 
