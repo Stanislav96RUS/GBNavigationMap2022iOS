@@ -8,12 +8,18 @@
 
 /* Begin PBXBuildFile section */
 		8508ABAE292F402C009EA59B /* RealmService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8508ABAD292F402C009EA59B /* RealmService.swift */; };
+		8555270229338CB300BC0718 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8555270129338CB300BC0718 /* LoginViewController.swift */; };
+		8555270429338CCA00BC0718 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8555270329338CCA00BC0718 /* LoginViewModel.swift */; };
+		8555270629338CDD00BC0718 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8555270529338CDD00BC0718 /* UserModel.swift */; };
+		8555270829338EBF00BC0718 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8555270729338EBF00BC0718 /* AppCoordinator.swift */; };
+		8555270A29338ECE00BC0718 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8555270929338ECE00BC0718 /* Coordinator.swift */; };
+		8555270E2933901200BC0718 /* UserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8555270C2933901200BC0718 /* UserViewModel.swift */; };
 		85753FA4292DFF8800E615C0 /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = 85753FA3292DFF8800E615C0 /* Realm */; };
 		85753FA6292DFF8800E615C0 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 85753FA5292DFF8800E615C0 /* RealmSwift */; };
 		85753FA8292E035600E615C0 /* CoordinateModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85753FA7292E035600E615C0 /* CoordinateModel.swift */; };
 		857FC937292BA6140010CDFC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 857FC936292BA6140010CDFC /* AppDelegate.swift */; };
 		857FC939292BA6140010CDFC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 857FC938292BA6140010CDFC /* SceneDelegate.swift */; };
-		857FC93B292BA6140010CDFC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 857FC93A292BA6140010CDFC /* ViewController.swift */; };
+		857FC93B292BA6140010CDFC /* UserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 857FC93A292BA6140010CDFC /* UserViewController.swift */; };
 		857FC93E292BA6140010CDFC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 857FC93C292BA6140010CDFC /* Main.storyboard */; };
 		857FC940292BA6150010CDFC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 857FC93F292BA6150010CDFC /* Assets.xcassets */; };
 		857FC943292BA6150010CDFC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 857FC941292BA6150010CDFC /* LaunchScreen.storyboard */; };
@@ -61,11 +67,17 @@
 
 /* Begin PBXFileReference section */
 		8508ABAD292F402C009EA59B /* RealmService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmService.swift; sourceTree = "<group>"; };
+		8555270129338CB300BC0718 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		8555270329338CCA00BC0718 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		8555270529338CDD00BC0718 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
+		8555270729338EBF00BC0718 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		8555270929338ECE00BC0718 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		8555270C2933901200BC0718 /* UserViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserViewModel.swift; path = "../../../../Downloads/GBMaps-lesson_three/GBMaps/GBMaps/Flow/UserScreen/UserViewModel.swift"; sourceTree = "<group>"; };
 		85753FA7292E035600E615C0 /* CoordinateModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinateModel.swift; sourceTree = "<group>"; };
 		857FC933292BA6140010CDFC /* GBNavigationMap2022iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GBNavigationMap2022iOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		857FC936292BA6140010CDFC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		857FC938292BA6140010CDFC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		857FC93A292BA6140010CDFC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		857FC93A292BA6140010CDFC /* UserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewController.swift; sourceTree = "<group>"; };
 		857FC93D292BA6140010CDFC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		857FC93F292BA6150010CDFC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		857FC942292BA6150010CDFC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -167,11 +179,17 @@
 		857FC935292BA6140010CDFC /* GBNavigationMap2022iOS */ = {
 			isa = PBXGroup;
 			children = (
-				857FC936292BA6140010CDFC /* AppDelegate.swift */,
+				8555270129338CB300BC0718 /* LoginViewController.swift */,
+				8555270329338CCA00BC0718 /* LoginViewModel.swift */,
+				8555270729338EBF00BC0718 /* AppCoordinator.swift */,
+				8555270929338ECE00BC0718 /* Coordinator.swift */,
 				85753FA7292E035600E615C0 /* CoordinateModel.swift */,
 				8508ABAD292F402C009EA59B /* RealmService.swift */,
+				857FC936292BA6140010CDFC /* AppDelegate.swift */,
 				857FC938292BA6140010CDFC /* SceneDelegate.swift */,
-				857FC93A292BA6140010CDFC /* ViewController.swift */,
+				857FC93A292BA6140010CDFC /* UserViewController.swift */,
+				8555270C2933901200BC0718 /* UserViewModel.swift */,
+				8555270529338CDD00BC0718 /* UserModel.swift */,
 				857FC93C292BA6140010CDFC /* Main.storyboard */,
 				857FC93F292BA6150010CDFC /* Assets.xcassets */,
 				857FC941292BA6150010CDFC /* LaunchScreen.storyboard */,
@@ -363,11 +381,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				857FC93B292BA6140010CDFC /* ViewController.swift in Sources */,
+				8555270229338CB300BC0718 /* LoginViewController.swift in Sources */,
+				8555270E2933901200BC0718 /* UserViewModel.swift in Sources */,
+				857FC93B292BA6140010CDFC /* UserViewController.swift in Sources */,
+				8555270A29338ECE00BC0718 /* Coordinator.swift in Sources */,
+				8555270629338CDD00BC0718 /* UserModel.swift in Sources */,
 				857FC937292BA6140010CDFC /* AppDelegate.swift in Sources */,
 				85753FA8292E035600E615C0 /* CoordinateModel.swift in Sources */,
 				857FC939292BA6140010CDFC /* SceneDelegate.swift in Sources */,
+				8555270829338EBF00BC0718 /* AppCoordinator.swift in Sources */,
 				8508ABAE292F402C009EA59B /* RealmService.swift in Sources */,
+				8555270429338CCA00BC0718 /* LoginViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

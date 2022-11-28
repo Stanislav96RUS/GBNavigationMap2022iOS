@@ -8,7 +8,8 @@
 import UIKit
 import GoogleMaps
 
-class ViewController: UIViewController {
+class UserViewController: UIViewController {
+    var viewModel: UserViewModel?
     
     @IBOutlet weak var mapView: GMSMapView!
     
@@ -103,6 +104,10 @@ class ViewController: UIViewController {
         }
     }
     
+    @IBAction func didTapLogout(_ sender: UIButton) {
+        viewModel?.logout()
+    }
+    
     @IBAction func didTapTrackButton(_ sender: UIButton) {
         
         if self.recUpdateLocation {
@@ -157,7 +162,7 @@ class ViewController: UIViewController {
     
 }
 
-extension ViewController: CLLocationManagerDelegate {
+extension UserViewController: CLLocationManagerDelegate {
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         
