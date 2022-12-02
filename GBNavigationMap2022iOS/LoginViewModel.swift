@@ -11,6 +11,6 @@ class LoginViewModel {
     weak var appCoordinator: AppCoordinator?
     
     func goToUserScreen() {
-        appCoordinator?.goToMapPage()
+        appCoordinator?.goToUserPage()
     }
 }

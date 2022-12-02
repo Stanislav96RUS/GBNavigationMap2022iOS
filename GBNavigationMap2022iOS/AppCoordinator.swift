@@ -46,7 +46,7 @@ class AppCoordinator: Coordinator {
         
     }
     
-    func goToMapPage() {
+    func goToUserPage() {
         guard let userViewController = storyboard.instantiateViewController(withIdentifier: "UserViewController") as? UserViewController else { return }
         
         let userViewModel = UserViewModel()

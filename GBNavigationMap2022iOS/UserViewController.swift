@@ -16,6 +16,8 @@ class UserViewController: UIViewController {
     var locationManager: CLLocationManager?
     let realmService = RealmService()
     
+    var locationManagers = LocationManagerService.instance
+    
     var route: GMSPolyline?
     var routePath: GMSMutablePath?
     var markers: [GMSMarker]?
@@ -49,6 +51,24 @@ class UserViewController: UIViewController {
         self.locationManager?.startMonitoringSignificantLocationChanges()
         self.locationManager?.requestAlwaysAuthorization()
     }
+    
+    func configureLocationManagers() {
+        self.locationManagers
+            .location
+            .asObservable()
+            .bind { [weak self] location in
+                guard
+                    let location = location,
+                    let self = self
+                else { return }
+                self.routePath?.add(location.coordinate)
+                self.route?.path = self.routePath
+                
+                let position = GMSCameraPosition.camera(withTarget: location.coordinate, zoom: self.zoom)
+                self.mapView.animate(to: position)
+            }
+    }
+
     
     private func addMarker(_ position: CLLocationCoordinate2D) {
         let marker = GMSMarker(position: position)

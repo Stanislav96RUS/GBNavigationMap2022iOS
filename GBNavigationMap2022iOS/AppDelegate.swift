@@ -7,6 +7,7 @@
 
 import UIKit
 import GoogleMaps
+import SwiftUI
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -22,6 +23,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window = UIWindow(frame: UIScreen.main.bounds)
         
         let navigationController = UINavigationController()
+        
         
         appCoordinator = AppCoordinator(navigationController: navigationController)
         appCoordinator?.start()

@@ -7,6 +7,8 @@
 
 import Foundation
 import UIKit
+import RxSwift
+import RxCocoa
 
 class LoginViewController: UIViewController {
     
@@ -19,7 +21,23 @@ class LoginViewController: UIViewController {
         }
     }
     
+    @IBOutlet weak var inputButton: UIButton!
+    
     let realmService = RealmService()
+    
+    private func configureLoginBindings() {
+        Observable
+            .combineLatest(
+                self.loginTextField.rx.text,
+                self.passwordTextField.rx.text
+            )
+            .map { login, password in
+                return !(login ?? "").isEmpty && (password ?? "").count >= 6
+            }
+            .bind { [weak inputButton] inputFilled in
+                inputButton?.isEnabled = inputFilled
+            }
+    }
     
     @IBAction func didTapLoginButton(_ sender: UIButton) {
         guard let login = loginTextField.text, !login.isEmpty,
