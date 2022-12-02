@@ -2,7 +2,7 @@
 //  GBNavigationMap2022iOSUITestsLaunchTests.swift
 //  GBNavigationMap2022iOSUITests
 //
-//  Created by Stanislav on 17.11.2022.
+//  Created by Stanislav on 21.11.2022.
 //
 
 import XCTest
