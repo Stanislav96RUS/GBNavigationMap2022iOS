@@ -31,9 +31,58 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window?.rootViewController = navigationController
         window?.makeKeyAndVisible()
 
+        let center = UNUserNotificationCenter.current()
+        center.delegate = self
+        
+        requestPermission(center: center)
+        
         return true
     }
     
+    func requestPermission(center: UNUserNotificationCenter) {
+        
+        center.requestAuthorization(options: [.alert, .badge, .sound]) { [ weak self ] granted, error in
+            guard granted else {
+                print("permission not granted")
+                return
+            }
+            
+            guard let self = self else { return }
+            
+            let content = self.createContent()
+            
+            let trigger = self.createTrigger()
+            
+            self.sendNotificationRequest(content: content, trigger: trigger)
+        }
+    }
+    
+    func createContent() -> UNNotificationContent {
+        let content = UNMutableNotificationContent()
+        content.title = "Это уведомление"
+        content.subtitle = "Нажми на меня"
+        content.body = "Нажми именно сюда"
+        content.userInfo = ["message": "Привет))"]
+        content.badge = 3
+        
+        return content
+    }
+    
+    func createTrigger() -> UNNotificationTrigger {
+        UNTimeIntervalNotificationTrigger(timeInterval: 5, repeats: false)
+    }
+    
+    func sendNotificationRequest(content: UNNotificationContent, trigger: UNNotificationTrigger) {
+        
+        let request = UNNotificationRequest(identifier: "timeNotification", content: content, trigger: trigger)
+        let center = UNUserNotificationCenter.current()
+        
+        center.add(request) { error in
+            if let error = error {
+                print(error.localizedDescription)
+            }
+        }
+    }
 
     // MARK: UISceneSession Lifecycle
 
@@ -52,3 +101,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 }
 
+extension AppDelegate: UNUserNotificationCenterDelegate {
+    func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse) async {
+        
+        let title = response.notification.request.content.title
+        let userInfo = response.notification.request.content.userInfo
+        
+        print(title)
+        
+        if let message = userInfo["message"] as? String {
+            print("Message: \(message)")
+        }
+    }
+}
