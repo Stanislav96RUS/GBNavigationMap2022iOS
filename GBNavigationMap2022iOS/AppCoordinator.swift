@@ -7,6 +7,7 @@
 
 import Foundation
 import UIKit
+import AVFoundation
 
 class AppCoordinator: Coordinator {
     
@@ -55,4 +56,44 @@ class AppCoordinator: Coordinator {
         navigation.pushViewController(userViewController, animated: true)
     }
     
+    func funcShowSelfyModule(image: UIImage) {
+        guard let controller = storyboard.instantiateViewController(withIdentifier: "SelfyViewController") as? SelfyViewController else { return }
+        
+        controller.image = image
+        
+        navigation.pushViewController(controller, animated: true)
+        
+    }
+    
+    func showPhotoModule() {
+        
+        guard let controller = storyboard.instantiateViewController(withIdentifier: "PhotoViewController") as? PhotoViewController else { return }
+        
+        //        self?.showSelfyModule(image: image)
+        
+        navigation.pushViewController(controller, animated: true)
+        
+    }
+    
+//    func showMainModule() {
+//
+//        guard let controller = storyboard.instantiateViewController(withIdentifier: "LoginViewController") as? LoginViewController else { return }
+//
+//        controller.onMap = { [weak self] usseles in self?.showMapModule(usseles: usseles)
+//        }
+//        controller.onLogount = { [weak self] in self?.onFinishFlow?()
+//        }
+//        controller.onTakePicture = { [weak self] image in self?.funcShowSelfyModule(image: image)
+//        }
+//        let rootController = UINavigationController(rootViewController: controller)
+//
+//        setAsRoot(rootController)
+//
+//        self.rootController = rootController
+//
+//        controller.onPhoto = { [weak self] in self?.showPhotoModule()
+//        }
+//
+//
+//    }
 }

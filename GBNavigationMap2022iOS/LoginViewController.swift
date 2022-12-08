@@ -9,10 +9,27 @@ import Foundation
 import UIKit
 import RxSwift
 import RxCocoa
+import AVFoundation
 
 class LoginViewController: UIViewController {
     
     var viewModel: LoginViewModel?
+    
+    var onPhoto: (() -> Void)?
+    
+    @IBAction func takePicture(_ sender: Any) {
+//        onPhoto?()
+        guard UIImagePickerController.isSourceTypeAvailable(.camera) else {
+            return }
+        let imagePickerController = UIImagePickerController()
+        imagePickerController.sourceType = .camera
+        imagePickerController.allowsEditing = true
+        imagePickerController.delegate = self
+        present(imagePickerController, animated: true)
+
+    }
+
+    
     
     @IBOutlet weak var loginTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField! {
@@ -78,4 +95,37 @@ class LoginViewController: UIViewController {
         present(alert, animated: true, completion: nil)
     }
     
+   
+    
+}
+
+extension LoginViewController: UINavigationControllerDelegate, UIImagePickerControllerDelegate {
+    
+    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+        picker.dismiss(animated: true)
+    }
+    
+    private func imagePickerController(
+        _ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String: Any]) {
+            
+            picker.dismiss(animated: true) { [weak self] in
+            
+                guard let image = self?.extractImage(from: info) else { return }
+            
+//                self?.onTakePicture?(image)
+                
+            }
+        }
+    
+    private func extractImage(from info: [String: Any]) -> UIImage? {
+        
+        if let image = info[UIImagePickerController.InfoKey.editedImage.rawValue] as? UIImage {
+            return image
+        } else if let image = info[UIImagePickerController.InfoKey.originalImage.rawValue] as? UIImage {
+            return image
+            
+        } else {
+                return nil
+        }
+    }
 }

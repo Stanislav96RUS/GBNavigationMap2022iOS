@@ -46,6 +46,8 @@
 		857FC996292BA8090010CDFC /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 857FC995292BA8090010CDFC /* SystemConfiguration.framework */; };
 		857FC998292BA8110010CDFC /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 857FC997292BA8110010CDFC /* UIKit.framework */; };
 		857FC99C292BAA850010CDFC /* GoogleMaps.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 857FC99B292BAA850010CDFC /* GoogleMaps.bundle */; };
+		85A7C1CC2941B3ED00DE0173 /* SelfyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85A7C1CB2941B3ED00DE0173 /* SelfyViewController.swift */; };
+		85A7C1CE2941BA5A00DE0173 /* PhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85A7C1CD2941BA5A00DE0173 /* PhotoViewController.swift */; };
 		85C79F58293727CB0041D67A /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = 85C79F57293727CB0041D67A /* RxCocoa */; };
 		85C79F5A293727CB0041D67A /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 85C79F59293727CB0041D67A /* RxSwift */; };
 		85C79F5C2937281A0041D67A /* LocationManagerService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85C79F5B2937281A0041D67A /* LocationManagerService.swift */; };
@@ -110,6 +112,8 @@
 		857FC995292BA8090010CDFC /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		857FC997292BA8110010CDFC /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		857FC99B292BAA850010CDFC /* GoogleMaps.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = GoogleMaps.bundle; sourceTree = "<group>"; };
+		85A7C1CB2941B3ED00DE0173 /* SelfyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelfyViewController.swift; sourceTree = "<group>"; };
+		85A7C1CD2941BA5A00DE0173 /* PhotoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoViewController.swift; sourceTree = "<group>"; };
 		85C79F5B2937281A0041D67A /* LocationManagerService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManagerService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -185,6 +189,8 @@
 		857FC935292BA6140010CDFC /* GBNavigationMap2022iOS */ = {
 			isa = PBXGroup;
 			children = (
+				85A7C1CB2941B3ED00DE0173 /* SelfyViewController.swift */,
+				85A7C1CD2941BA5A00DE0173 /* PhotoViewController.swift */,
 				85C79F5B2937281A0041D67A /* LocationManagerService.swift */,
 				8555270129338CB300BC0718 /* LoginViewController.swift */,
 				8555270329338CCA00BC0718 /* LoginViewModel.swift */,
@@ -401,6 +407,8 @@
 				85753FA8292E035600E615C0 /* CoordinateModel.swift in Sources */,
 				857FC939292BA6140010CDFC /* SceneDelegate.swift in Sources */,
 				8555270829338EBF00BC0718 /* AppCoordinator.swift in Sources */,
+				85A7C1CC2941B3ED00DE0173 /* SelfyViewController.swift in Sources */,
+				85A7C1CE2941BA5A00DE0173 /* PhotoViewController.swift in Sources */,
 				8508ABAE292F402C009EA59B /* RealmService.swift in Sources */,
 				8555270429338CCA00BC0718 /* LoginViewModel.swift in Sources */,
 			);
